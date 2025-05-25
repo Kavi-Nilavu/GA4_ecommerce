@@ -493,6 +493,23 @@
 		<!-- Jquery Plugins, main Jquery -->	
     <script src="./assets/js/plugins.js"></script>
     <script src="./assets/js/main.js"></script>
+	           <!-- Payment Tracking GA4-->
+	<button id="checkout-button">Checkout</button>
+
+<script>
+document.getElementById("checkout-button").addEventListener("click", function() {
+  gtag('event', 'begin_checkout', {
+    currency: 'EUR',
+    value: 49.99,
+    items: [{
+      item_name: 'Sneakers',
+      item_id: 'SKU-456',
+      quantity: 1
+    }]
+  });
+});
+</script>
+
       
 </body>
 
