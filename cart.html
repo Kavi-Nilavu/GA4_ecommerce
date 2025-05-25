@@ -448,6 +448,26 @@
     <!-- Jquery Plugins, main Jquery -->	
     <script src="./assets/js/plugins.js"></script>
     <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/main.js"></script>
+
+<!-- ✅ Your GA4 event code here -->
+<script>
+  document.getElementById("add-to-cart").addEventListener("click", function() {
+    gtag('event', 'add_to_cart', {
+      currency: 'EUR',
+      value: 39.99,
+      items: [{
+        item_name: 'Sneakers',
+        item_id: 'SKU-456',
+        quantity: 1
+      }]
+    });
+  });
+</script>
+
+</body>
+</html>
+
 </body>
 
 </html>
